@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Feed con Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>  
+
+  <div class="container-fluid">
+
+    <!-- Navbar -->
+    <nav class="navbar bg-body-tertiary">
+        <div class="container ms-0">
+          <a class="navbar-brand fw-bold" href="#">
+            <i class="fab fa-instagram fa-lg p-2"></i>Instagram
+          </a>
+        </div>
+
+
+
+      <!-- Button trigger modal -->
+  <button type="button" class="btn btn-success me-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Create new post
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Create a new post</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body fw-semibold text-black">
+          Caption:
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1"></label>
+            <textarea class="form-control text-body-secondary" id="exampleFormControlTextarea1" rows="3">Add the caption of your post here</textarea>
+          </div>
+        <p class="form-icons m-2">
+            <i class="fas fa-camera-retro fa-lg bg-secondary bg-opacity-10 border border-secondary-subtle rounded mx-2 p-2"></i>
+            <i class="fas fa-map-marker-alt fa-lg bg-secondary bg-opacity-10 border border-secondary-subtle rounded mx-2 p-2"></i>
+        </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-success">Publish</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+      <!-- Dropdown -->
+      <div class="dropdown me-2">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+            <i class="fas fa-cog"></i>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end">
+          <li><a class="dropdown-item" href="#">Profile</a></li>
+          <li><a class="dropdown-item" href="#">Accesibility</a></li>
+          <li><a class="dropdown-item" href="#">Privacy & Data</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+        </ul>
+      </div>
+    </nav>
+
+      <!-- Nav tabs -->
+    <ul class="nav nav-tabs justify-content-center">
+      <li class="nav-item">
+        <a class="nav-link active" data-bs-toggle="tab" href="#grid"><i class="fas fa-th fa-lg"></i></a>    
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="tab" href="#center-grid"><i class="fas fa-square fa-lg"></i></a>
+      </li>
+    </ul>
+
+      <!-- Nav tab content 1 -->
+
+    <div class="tab-content">
+        <div class="tab-pane active" id="grid">
+            <div class="row align-items-center">
+                <div class="col-md-4 mb-3 d-flex align-items-center">
+                    <img src="fotos/avenue.jpg" alt="A path into the woods" class="object-fit-cover img-ajustada"> 
+                </div>
+                <div class="col-md-4 mb-3 d-flex align-items-center">
+                    <img src="fotos/flowers.jpg" alt="Some daisies" class="object-fit-cover img-ajustada">
+                </div>
+                <div class="col-md-4 mb-3 d-flex align-items-center">
+                    <img src="fotos/mountains.jpg" alt="An overwhelming views over the mountains" class="object-fit-cover img-ajustada">
+                </div>
+            </div>
+
+            <div class="row align-items-center">
+                <div class="col-md-4 mb-3 d-flex align-items-center">
+                    <img src="fotos/road-1.jpg" alt="A road in the countryside" class="object-fit-cover img-ajustada">
+                </div>
+                <div class="col-md-4 mb-3 d-flex align-items-center">
+                    <img src="fotos/road-mountain.jpg" alt="A path in the forest" class="object-fit-cover img-ajustada">
+                </div>
+                <div class="col-md-4 mb-3 d-flex align-items-center">
+                    <img src="fotos/road-park.jpg" alt="A curvy path in the Autumn forest" class="object-fit-cover img-ajustada">
+                </div>
+            </div>
+
+            <div class="row align-items-center">
+                <div class="col-md-4 mb-3 d-flex align-items-center">
+                    <img src="fotos/sea.jpg" alt="A beautiful picture of a calm sea" class="object-fit-cover img-ajustada">
+                </div>
+                <div class="col-md-4 mb-3 d-flex align-items-center">
+                    <img src="fotos/sunrise.jpg" alt="A lovely picture of a sunrise over the sea" class="object-fit-cover img-ajustada">
+                </div>
+                <div class="col-md-4 mb-3 d-flex align-items-center">
+                    <img src="fotos/sunset.jpg" alt="A nice picture of a sunset over the sea" class="object-fit-cover img-ajustada">
+                </div>
+            </div>
+        </div>
+
+              <!-- Nav tab content 2 -->
+
+        <div class="tab-pane" id="center-grid">
+          <div class="d-flex justify-content-center">
+            <div class="col-md-4 mb-3 d-flex justify-content-center flex-column">
+              <div class="card m-3">
+                <div class="card-title d-flex justify-content-between p-2">
+                  <h3>Explore the unknown</h3>
+                  <p>30/03</p>
+                </div>
+                <img src="fotos/avenue.jpg" class="card-img" alt="A path into the woods">
+                <div class="card-body">
+                  <p class="card-text fw-bold m-1 p-1">20 likes</p>
+                  <p class="card-text m-1 p-1">Nobody knows when the path ends neither where the path goes to. Just keep going. Be self-confident. Be patient. Be stronger than your fears.</p>
+                </div>
+              </div>
+              <div class="card m-3">
+                <div class="card-title d-flex justify-content-between p-2">
+                  <h3>Lovely daisy flowers</h3>
+                  <p>27/03</p>
+                </div>
+                <img src="fotos/flowers.jpg" class="card-img" alt="Some daisies">
+                <div class="card-body">
+                  <p class="card-text fw-bold m-1 p-1">45 likes</p>
+                  <p class="card-text m-1 p-1">Miley Cirus can probably buy some for herself but they will not look like these ones. That is granted!</p>
+                </div>
+              </div>
+              <div class="card m-3">
+                <div class="card-title d-flex justify-content-between p-3">
+                  <h3>It's not the destination, it's the journey</h3>
+                  <p>26/03</p>
+                </div>
+                <img src="fotos/road-1.jpg" class="card-img" alt="A road in the countryside">
+                <div class="card-body">
+                  <p class="card-text fw-bold m-1 p-1">32 likes</p>
+                  <p class="card-text m-1 p-1">This picture was taken during my trip though Route 66...or was it on the road from Albacete to Murcia? Anyway, I have never visited any of these places unfortunately.</p>
+                </div>
+              </div>
+              <div class="card m-3">
+                <div class="card-title d-flex justify-content-between p-3">
+                  <h3>Resilience</h3>
+                  <p>24/03</p>
+                </div>
+                <img src="fotos/sunset.jpg" class="card-img" alt="A nice picture of a sunset over the sea">
+                <div class="card-body">
+                  <p class="card-text fw-bold m-1 p-1">47 likes</p>
+                  <p class="card-text m-1 p-1">Don't ask me how the hell this tree exists.</p>
+                </div>
+              </div>
+              <div class="card m-3">
+                <div class="card-title d-flex justify-content-between p-3">
+                  <h3>Best views comes after the hardest climb</h3>
+                  <p>22/03</p>
+                </div>
+                <img src="fotos/mountains.jpg" class="card-img" alt="An overwhelming views over the mountains">
+                <div class="card-body">
+                  <p class="card-text fw-bold m-1 p-1">55 likes</p>
+                  <p class="card-text m-1 p-1">I'm afraid I'm not Juanito Oiarzabal. Moreover, you didn't want to see me going slope down, do you?.</p>
+                </div>
+              </div>
+              <div class="card m-3">
+                <div class="card-title d-flex justify-content-between p-3">
+                  <h3>Proper Autumn vol. II</h3>
+                  <p>20/03</p>
+                </div>
+                <img src="fotos/road-mountain.jpg" class="card-img" alt="A path in the forest">
+                <div class="card-body">
+                  <p class="card-text fw-bold m-1 p-1">35 likes</p>
+                  <p class="card-text m-1 p-1">This was the same forest road, but in a straight line.</p>
+                </div>
+              </div>
+              <div class="card m-3">
+                <div class="card-title d-flex justify-content-between p-3">
+                  <h3>Proper Autumn</h3>
+                  <p>20/03</p>
+                </div>
+                <img src="fotos/road-park.jpg" class="card-img" alt="A curvy path in the Autumn forest">
+                <div class="card-body">
+                  <p class="card-text fw-bold m-1 p-1">42 likes</p>
+                  <p class="card-text m-1 p-1">This was curvy path into the forest. It was Autumn but I don't remember where the picture was taken. It wasn't in Sevilla for sure, as we do not have Autumn here anymore...we only have a 3 months light winter and 9 months of hellish summer.</p>
+                </div>
+              </div>
+              <div class="card m-3">
+                <div class="card-title d-flex justify-content-between p-3">
+                  <h3>Sunrise...when words are useless</h3>
+                  <p>18/03</p>
+                </div>
+                <img src="fotos/sunrise.jpg" class="card-img" alt="A lovely picture of a sunrise over the sea">
+                <div class="card-body">
+                  <p class="card-text fw-bold m-1 p-1">66 likes</p>
+                  <p class="card-text m-1 p-1">Rest but never quit. Even the sun has a sinking spell each evening. But it always rises the next morning. At sunrise, every soul is born again.</p>
+                </div>
+              </div>
+              <div class="card m-3">
+                <div class="card-title d-flex justify-content-between p-3">
+                  <h3>Sunset is the opening music of the night</h3>
+                  <p>15/03</p>
+                </div>
+                <img src="fotos/sea.jpg" class="card-img" alt="A beautiful picture of a calm sea">
+                <div class="card-body">
+                  <p class="card-text fw-bold m-1 p-1">59 likes</p>
+                  <p class="card-text m-1 p-1">I think I have seen way too more sunrises than sunsets in my life. However, this one in particular was worth it.</p>
+                </div>
+              </div>           
+            </div>
+          </div>
+        </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+
+</body>
+</html> 
